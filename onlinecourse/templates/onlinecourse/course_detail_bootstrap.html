@@ -64,7 +64,7 @@
                     </div>
                     <div id="exam" class="collapse" aria-labelledby="exam" data-parent="#accordion">
                     <div class="card-body">                        
-                        <form id="questionform" action="point to a submit view" method="post">
+                        <form id="questionform" action="{% url 'onlinecourse:submit' course.id %}" method="post">
                             {% csrf_token %}
                             {% for question in course.question_set.all %}
                             <div class="card mt-1">
